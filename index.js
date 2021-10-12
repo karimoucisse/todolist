@@ -1,5 +1,12 @@
 
-function onTaskSubmit (){
+var onsubmit
+
+function onTaskSubmit (onsubmit){
+    return onsubmit + onsubmit;
 }
-<form onsubmit="onTaskSubmit(); return false;">
-console.log(onTaskSubmit)
+ if (onTaskSubmit === onsubmit){
+     console.log("false")
+ }
+
+ console.log(onsubmit)
+ 
