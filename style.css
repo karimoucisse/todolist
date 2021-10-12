@@ -12,7 +12,7 @@ header div {
 }
 nav{
     height: 100vh;
-    background-color: rgb(103, 103, 221);
+    background-color: rgb(104, 160, 245);
     display: flex;
     /* align-items: center; */
     justify-content: center;
@@ -20,14 +20,20 @@ nav{
 }
 nav form{
     display: flex;
-}
+    
+} 
 nav input{
     width: 400px;
     height: 40px;
+    /* box-shadow: 3px 3px 10px black; */
 }
+
 nav button {
     height: 40px;
+    width: 100px;
     background-color: blue;
     color: #fff;
+    font-size: 24px;
+    /* box-shadow: 0px 3px 10px black; */
     
 }
