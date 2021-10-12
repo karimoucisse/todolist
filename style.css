@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+header {
+    padding: 8px 60px;
+    border-bottom: 3px solid black;
+    
+}
+header div {
+    color: blue;
+    font-size: 40px;
+}
+nav{
+    height: 100vh;
+    background-color: rgb(103, 103, 221);
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding-top: 40px;
+}
+nav form{
+    display: flex;
+}
+nav input{
+    width: 400px;
+    height: 40px;
+}
+nav button {
+    height: 40px;
+    background-color: blue;
+    color: #fff;
+}
