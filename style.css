@@ -12,7 +12,7 @@ header div {
 }
 nav{
     height: 100vh;
-    background-color: rgb(103, 103, 221);
+    background-color: rgb(104, 160, 245);
     display: flex;
     /* align-items: center; */
     justify-content: center;
@@ -20,14 +20,28 @@ nav{
 }
 nav form{
     display: flex;
-}
+    
+} 
 nav input{
     width: 400px;
+<<<<<<< HEAD
     height: 35px;
+=======
+    height: 40px;
+    /* box-shadow: 3px 3px 10px black; */
+>>>>>>> d320ca657989bd1935b9ff9f36c146ebfefe3f17
 }
+
 nav button {
     height: 40px;
+<<<<<<< HEAD
     background-color: rgb(0, 204, 255);
+=======
+    width: 100px;
+    background-color: blue;
+>>>>>>> d320ca657989bd1935b9ff9f36c146ebfefe3f17
     color: #fff;
+    font-size: 24px;
+    /* box-shadow: 0px 3px 10px black; */
     
 }
