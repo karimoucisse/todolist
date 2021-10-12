@@ -1,11 +1,16 @@
 var form = document.getElementById("form");
-var input = document.getElementById("input")
 var list = document.getElementById("list")
+var tasks =[];
 
-    // On récupère l'élément sur lequel on veut détecter le clic
- function onTaskSubmit() {          // On écoute l'événement click
-    var listElementDiv = document.createElement("div");
-    listElementDiv.innerHTML = input.value
-    list.innerHTML= listElementDiv
-             // On change le contenu de notre élément pour afficher "C'est cliqué !"
+
+ function onTaskSubmit() {          
+    var input = document.getElementById("input")
+    tasks.push({value:input.value, status:"to do"})
+    console.log(tasks);
+    list.innerHTML=""
+    tasks.forEach(function(task){
+        list.innerHTML = list.innerHTML + `
+     <div><p>${task.value}</p><p>${task.status}</p><i class="fas fa-times"></i></div>`
+    })
+     
 }
