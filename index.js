@@ -1,7 +1,7 @@
 var form = document.getElementById("form");
 var list = document.getElementById("list")
 var tasks =[];
-var goAway = document.getElementById("go-away")
+var goAway = document.getElementById("go-away" )
 
 
 
