@@ -26,9 +26,10 @@
                 
             </section>
             <div class="status_btn">
-                <button id="fliter_todo">To do</button>
-                <button id="fliter_todo">Done</button>
-                <button id="fliter_todo">Doing</button>
+                <button id="fliter_todo" onclick="filterButtons('to do')">To do</button>
+                <button id="fliter_todo" onclick="filterButtons('Doing')">Doing</button>
+                <button id="fliter_todo" onclick="filterButtons('Done')">Done</button>
+                <div class="random_task" id="random_task" onclick="onRandomClick()"><i class="fas fa-random"></i></div>
             </div>
             <div id="list">
                 

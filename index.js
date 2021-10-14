@@ -22,7 +22,7 @@ var goAway = document.getElementById("goaway" )
     tasks.push(values)
     console.log(tasks);
     
-    printTasks()
+    printTasks(tasks)
        
 }
 
@@ -33,28 +33,31 @@ function onClickRemove(indexElement){
     tasks.splice(indexElement,1)
     // console.log(`onClickRemove after remove tablau task ${tasks.length}`);
     
-    printTasks()
+    printTasks(tasks)
     
     // list = taskeList()
     // console.log(`voici ${list}`);
 }
-function printTasks(){
+function printTasks(array){
     list.innerHTML=""
-    tasks.forEach(function(task,index){
+    array.forEach(function(task,index){
         
         var croix = `<i class="fas fa-times remove"  onclick="onClickRemove(${index})"></i>`
         list.innerHTML = list.innerHTML + `
-            <div id="list_container">
-                <p>${task.value}</p>
-                <div class="status_list_container" id="status_list_container${index}">
-                    ${task.status} 
-                    <i class="fas fa-sort-down" onclick="onClickPrintStatus(${index})"></i> 
-                </div>
-                ${croix}
-                <div id="modif${index}">
-                    <i class="fas fa-pencil-alt modification"  onclick=" onClickPrintInput(${index})"></i>
-                </div>
-            </div>`
+        <div id="list_container">
+            <p>${task.value}</p>
+            <div class="status_list_container" id="status_list_container${index}">
+                ${task.status} 
+                <i class="fas fa-sort-down" onclick="onClickPrintStatus(${index})"></i> 
+            </div>
+            <div id="modif${index}">
+                <i class="fas fa-pencil-alt modification"  onclick=" onClickPrintInput(${index})"></i>
+            </div>
+            <div id="priority${index}" class="priority">
+                <i class="fas fa-sort-amount-down" onclick="onClickPriority(${index})"></i>
+            </div>
+            <div class="container-remove">${croix}</div>
+        </div>`
     })
     return
 }
@@ -74,7 +77,7 @@ function onClickModification(indexElement){
     
     console.log(input_change.value);
     console.log(`index ${tasks[indexElement].value}`);
-    printTasks()
+    printTasks(tasks)
     return
 }
 function onClickPrintStatus(indexElement){
@@ -93,22 +96,80 @@ function onClickPrintStatus(indexElement){
     return
 }
 function onClickTodoStatus(indexElement){
-    tasks[indexElement].status="To Do"
-    printTasks()
+    tasks[indexElement].status="to do"
+    printTasks(tasks)
     return
 }
 function onClickTDoingStatus(indexElement){
     tasks[indexElement].status="Doing"
-    printTasks()
+    printTasks(tasks)
     return
 }
 function onClickDoneStatus(indexElement){
     tasks[indexElement].status="Done"
-    printTasks()
+    printTasks(tasks)
     return
 }
-function onclickFilterTodo(){
-    a
+// function onclickFilterTodo(){
+//     var filterTodo = tasks.filter(function(task){
+//         return task.status==="to do"
+//     })
+//     tasks = filterTodo;
+//    console.log(filterTodo);
+//    printTasks()
+//     return
+// }
+// function onclickFilterdoing(){
+//     var filterDoing = tasks.filter(function(task){
+//         return task.status==="Doing"
+//     })
+//     tasks = filterDoing;
+//    printTasks()
+//     return
+// }
+// function onclickFilterdone(){
+//     var filterDone = tasks.filter(function(task){
+//         return task.status==="Done"
+//     })
+//     tasks = filterDone;
+//    printTasks()
+//     return
+// }
+function filterButtons(filterStatus){
+    var filter= tasks.filter(function(task){
+        return task.status===`${filterStatus}`
+    })
+    // tasks = filter;
+   printTasks(filter)
+    return
+}
+
+function onRandomClick (){
+    // var random = document.getElementById("random_task");
+    var list = ["Sport","Menage","Balade","Travail","musculation","meditation","lecture"]
+    var min = 0;
+    var max = list.length - 1;
+    var random = Math.floor(Math.random() * (max - min + 1) + min);
+    console.log("voici mon random",list[random]);
+    tasks.push({value:list[random],
+        status:"to do"})
+    printTasks(tasks)
+    return
+}
+function onClickPriority(indexElement){
+    
+    var priority = document.getElementById(`priority${indexElement}`)
+    index=indexElement;
+    priority.innerHTML=`
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>`
+        
+    return
 }
 
 
