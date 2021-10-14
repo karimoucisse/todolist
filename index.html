@@ -4,47 +4,42 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/9c09657d67.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <title>To do list</title>
     </head>
     <body>
-
-        <header>
-            <div class="logo">Todolist</div>
-        </header>
-        <section>
-            <!-- <div class="shadow"></div> -->
-            <form id="form" onsubmit="onTaskSubmit(); return false;">                
-                    <input type="text" id="input" placeholder="What are you going to do Today ?">
-                    <button><i class="fas fa-plus"></i></button>
-            </form>
-            
-        </section>
-        <div id="list">
-        </div>
-
-<!-- 
-        <div class="supp button"><button>X</button></div>
-
-            <<button class="btn_modif">Modifier</button>
-
-            <div class="filtre button">
-              <button>To do</button>
-              <button>Doing</button>
-              <button>Done</button>
+        <div class="shadow"></div>
+        <div class="container_todolist">
+            <header>
+                <div class="logo">Todolist</div>
+            </header>
+            <section>
+                <!-- <div class="shadow"></div> -->
+                <form id="form" onsubmit="onTaskSubmit(); return false;">                
+                        <input type="text" id="input" placeholder="What are you going to do Today ?">
+                        <button><i class="fas fa-plus"></i></button>
+                </form>
+                
+            </section>
+            <div class="status_btn">
+                <button id="fliter_todo">To do</button>
+                <button id="fliter_todo">Done</button>
+                <button id="fliter_todo">Doing</button>
             </div>
+            <div id="list">
+                
+            </div>
+        </div>
+        
 
-            <div class="random button">
-              <button>Random task</button>
-            </div> -->
-            
+
 
         
        
-      
-
-
 
 
     <script src="index.js"></script>  
