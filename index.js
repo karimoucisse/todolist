@@ -107,6 +107,9 @@ function onClickDoneStatus(indexElement){
     printTasks()
     return
 }
+function onclickFilterTodo(){
+    a
+}
 
 
 
