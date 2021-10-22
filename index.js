@@ -5,10 +5,6 @@ var goAway = document.getElementById("goaway" )
 // var inputText = document.getElementById("input")
 
 
-
-
-
-
 // remove.addEventListener('mousemove', function(event) {
 //     console.log(event);
 // });
@@ -153,6 +149,11 @@ function onRandomClick (){
     console.log("voici mon random",list[random]);
     tasks.push({value:list[random],
         status:"to do"})
+    printTasks(tasks)
+    return
+}
+function onDeleteClick() {
+    tasks = [];
     printTasks(tasks)
     return
 }
